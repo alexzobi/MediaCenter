@@ -4,6 +4,7 @@
 import fs from 'fs';
 import path from 'path';
 import Router from 'koa-router';
+import knex from '../../db/knex';
 
 const extname = path.extname;
 export const router = new Router();

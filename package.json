@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel --presets es2015 -d lib/ src",
-    "start": "yarn build && node lib/index.js"
+    "start": "yarn build && node lib/index.js",
+    "db:migrate": "knex migrate:latest",
+    "db:migrate:rollback": "knex migrate:rollback",
+    "db:seed": "knex seed:run"
   },
   "dependencies": {
     "knex": "^0.17.6",

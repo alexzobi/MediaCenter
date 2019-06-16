@@ -2,13 +2,14 @@
 
 import uuid from 'uuid';
 
-export default class Reward {
+export default class Movie {
   constructor(
     name,
     description,
     rating,
     genre,
     year,
+    studio
     cast,
     image,
   ) {
@@ -19,6 +20,7 @@ export default class Reward {
       rating,
       genre,
       year,
+      studio
       cast,
       image,
       createdAt: new Date(),
@@ -48,6 +50,10 @@ export default class Reward {
 
   get year() {
     return this._data.year;
+  }
+
+  get studio() {
+    return this._data.studio;
   }
 
   get cast() {
@@ -84,6 +90,10 @@ export default class Reward {
 
   set year(year) {
     this._data.year = year;
+  }
+
+  set studio(studio) {
+    this._data.studio = studio;
   }
 
   set cast(cast) {
