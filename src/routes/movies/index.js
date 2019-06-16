@@ -9,9 +9,6 @@ const extname = path.extname;
 export const router = new Router();
 
 router.get('/:movieId', async ctx => {
-
-  console.log('ALEXDEBUG: ctx.req.params.movieId', ctx.params)
-
   const fpath = path.join(__dirname, '../../../assets', ctx.path);
   const fstat = await stat(fpath);
 
