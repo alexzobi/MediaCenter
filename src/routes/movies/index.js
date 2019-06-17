@@ -9,6 +9,14 @@ import knex from '../../db/knex';
 const extname = path.extname;
 export const router = new Router();
 
+router.get('/', async ctx => {
+  const movieList = 
+    await knex('Movies')
+      .select('*')
+
+  ctx.body = movieList
+})
+
 router.get('/:movieId', async ctx => {
   const fpath = path.join(__dirname, '../../../assets', ctx.path);
   const fstat = await stat(fpath);

@@ -9,7 +9,7 @@ export default class Movie {
     rating,
     genre,
     year,
-    studio
+    studio,
     cast,
     image,
   ) {
@@ -20,7 +20,7 @@ export default class Movie {
       rating,
       genre,
       year,
-      studio
+      studio,
       cast,
       image,
       createdAt: new Date(),
